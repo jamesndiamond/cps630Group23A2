@@ -8,25 +8,30 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>CPS630 Assignment 1</title>
 </head>
-<body>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="artwork.js"></script>
-
+<body>	
 	<div class="container-fluid">
 		<nav class="navbar navbar-light bg-light">
 			<button onclick="clearr()" class="btn btn-secondary" type="button">Home</button>
 			<button>About Us</button>
 			<button>Blogs</button>
-			<span class="glyphicon glyphicon-shopping-cart"></span>
+		<div class="container">
+				<a href="#" class="btn btn-info">
+						<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+					  </a>
+		</div>
+		
 		</nav>
 		
+		
+
+
+		<div id="about"> </div>
+
 		<div class="container information-display" id="artArtists">
 			<div class="col"> 
 				<div id="menu">
@@ -145,14 +150,6 @@
 		document.getElementById("picture").src = "wollehmagritte.jpg" ;
 		document.getElementById("information").innerHTML = "Date of Birth: Nov. 21, 1898<br> Date of Death: Aug. 15, 1967<br> Place of living: Belgium<br> Genre of work: Surrealism<br> Famous works: The Treachery of Images, On the Threshold of Liberty, The Son of Man, The Human Condition, Elective Affinities, The Portrait, Golconda, The Menaced Assassin" ;
 	}
-
-
-
-
-
-
-
-
 
 	</script>
 </body>
