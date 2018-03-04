@@ -1,5 +1,5 @@
 .dropdown {
-  margin: 50px 0px;
+  margin: 50px;
 }
 
 img {
@@ -18,15 +18,27 @@ img {
 	background-color: #d3d3d3 !important;
 }
 
-#artArtists {
-	
-}
-
-#picture, #information{
+#picture{
 	padding: 8px;
 	border: 3px solid #000;
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+}
+#information{
+	padding: 8px;
+	border: 3px solid #000;
+	min-width: 250px;
+	min-height: 250px;
+	max-width: 250px;
+	max-height: 250px;
 }
 
 th,td{
 	padding: 0 8px;
+}
+
+#col-1, #col-2, #artArtists2, #about {
+	display: none;
 }

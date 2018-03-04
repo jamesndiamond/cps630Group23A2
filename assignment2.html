@@ -9,24 +9,54 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>CPS630 Assignment 1</title>
-</head>
-<body>
-	<!-- Optional JavaScript -->
+		<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="artwork.js"></script>
+<script src="artwork.js"></script>
+	<title>CPS630 Assignment 2</title>
+</head>
+<body>
+
+
 
 	<div class="container-fluid">
 		<nav class="navbar navbar-light bg-light">
-			<button onclick="clearr()" class="btn btn-secondary" type="button">Home</button>
-			<button>About Us</button>
+			<a href="http://scs.ryerson.ca/~j6diamon/assignments/assignment2/assignment2.html"><button onclick="clearr()" class="btn btn-secondary" type="button">Home</button></a>
+			<button onClick="about()">About Us</button>
 			<button>Blogs</button>
 			<span class="glyphicon glyphicon-shopping-cart"></span>
 		</nav>
 		
+
+		<div class="container" id="about">
+			<h1 class="display-3">About The Authors</h1>
+			<p class="lead">Group # 23</p>
+			<table id="authorTable">
+				<tr>	
+					<th>
+						Name
+					</th>
+					<th>
+						Student Number
+					</th>
+				</tr>
+				<tr>
+					<td>James Diamond</td>
+					<td>500657801</td>
+				</tr>
+				<tr>
+					<td>Garo Nazarian</td>
+					<td>500615344</td>
+				</tr>
+				<tr>
+					<td>Jojo Crus</td>
+					<td>500641359</td>
+				</tr>
+			</table>
+		</div>
+
 		<div class="container information-display" id="artArtists">
 			<div class="col"> 
 				<div id="menu">
@@ -59,11 +89,11 @@
 							Museum
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-							<button onclick="museum1()" class="dropdown-item" type="button">Museum 1</button>
-							<button onclick="museum2()" class="dropdown-item" type="button">Museum 2</button>
-							<button onclick="museum3()" class="dropdown-item" type="button">Museum 3</button>
-							<button onclick="museum4()" class="dropdown-item" type="button">Museum 4</button>
-							<button onclick="museum5()" class="dropdown-item" type="button">Museum 5</button>
+							<button class="dropdown-item" type="button">The Louvre</button>
+							<button class="dropdown-item" type="button">Smithsonian</button>
+							<button class="dropdown-item" type="button">Museum of Modern Art</button>
+							<button class="dropdown-item" type="button">Metropolitan Museum of Art</button>
+							<button class="dropdown-item" type="button">Frick Collection</button>
 						</div>
 					</div>
 				</div>
@@ -71,89 +101,12 @@
 			<div class="col" id="col-1"><img id="picture" src="" alt="img"></div>
 			<div class="col" id="col-2"><p id="information"></p></div>
 		</div>
+		<div class="container information-display" id="artArtists2">
+			<div class="col"><img id="picture2" src="" alt="img"></div>
+			<div class="col"><p id="information2"></p></div>
+			<div class="col"></div>
+		</div>
 	</div>
 
-
-	<script type="text/javascript">
-		function clearr(){
-		document.getElementById("about").style.display="block";
-		document.getElementById("artArtists").style.display = "none";
-	}
-	function artWork1() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "starrynight.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Production: June 1889<br> Type of the painting colours: Oil on Canvas <br> Dimensions: 73.7cm x 92.1cm<br> Location: Museum of Modern Art, NYC<br> Artist: Vincent van Gosh<br> Price: N/A<br> Genre: Post-Impressionist" ;
-	}
-	function artWork2() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "lagrenouillère.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Production:Sept. 1869<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 74.6cm x 99.7cm<br> Location: Metropolitan Museum of Art<br> Artist: Claude Monet<br> Price: N/A<br> Genre: Impressionist" ;
-	}
-	function artWork3() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "thelastsupper.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Production: 1490s<br> Type of the painting colours: Fresco-secco<br> Dimensions: 460cm x 880cm<br> Location: Convent of Santa Maria delle Grazie, Milan<br> Artist: Leonardo da Vinci<br> Price: N/A <br> Genre: High Renaissance" ;
-	}
-	function artWork4() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "americangothic.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Production: 1930<br> Type of the painting colours: Oil on Beaverboard<br> Dimensions: 78cm x 65.3cm<br> Location: Art Institute of Chicago<br> Artist: Grant Wood<br> Price: N/A <br> Genre: Southern Gothic" ;
-	}
-	function artWork5() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "thesonofman.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Production: 1964<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 116cm x 89cm<br> Location: Private Collection<br> Artist: René Magritte<br> Price: Unknown <br> Genre: Surrealist" ;
-	}
-	function artist1() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "vangogh.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: March 30, 1853<br> Date of Death: July 29 1890<br> Place of living: Cimetière d'Auvers-sur-Oise, France<br> Genre of work: Post-Impressionist<br> Famous works: Sorrow, The Potato Eaters, Sunflowers, Bedroom in Arles, The Starry Night, Portrait of Dr. Gachet, Wheatfield with Crows" ;
-	}
-	function artist2() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "claudemonet.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: Nov. 14, 1840<br> Date of Death: Dec. 5, 1926<br> Place of living: France<br> Genre of work: Impressionism<br> Famous works: Impression, Sunrise, Rouen Cathedral series, London Parliament series, Water Lilies, Haystacks, Poplars" ;
-	}
-	function artist3() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "leonardodavinci.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: April 15, 1452<br> Date of Death: May 2, 1519<br> Place of living: Italy/France<br> Genre of work: High Renaissance<br> Famous works: Mona LIsa, The Last Supper, The Vitruvian Man, Lady with en Ermine" ;
-	}
-	function artist4() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "grantwood.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: Feb. 13, 1891<br> Date of Death: Feb. 12, 1942<br> Place of living: Iowa<br> Genre of work: Regionalism<br> Famous works: American Gothic" ;
-	}
-	function artist5() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "wollehmagritte.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: Nov. 21, 1898<br> Date of Death: Aug. 15, 1967<br> Place of living: Belgium<br> Genre of work: Surrealism<br> Famous works: The Treachery of Images, On the Threshold of Liberty, The Son of Man, The Human Condition, Elective Affinities, The Portrait, Golconda, The Menaced Assassin" ;
-	}	
-	function museum1() {
-		document.getElementById("about").style.display = "none";
-		document.getElementById("artArtists").style.display = "-webkit-box";
-		document.getElementById("picture").src = "wollehmagritte.jpg" ;
-		document.getElementById("information").innerHTML = "Date of Birth: Nov. 21, 1898<br> Date of Death: Aug. 15, 1967<br> Place of living: Belgium<br> Genre of work: Surrealism<br> Famous works: The Treachery of Images, On the Threshold of Liberty, The Son of Man, The Human Condition, Elective Affinities, The Portrait, Golconda, The Menaced Assassin" ;
-	}
-
-
-
-
-
-
-
-
-
-	</script>
 </body>
 </html>
