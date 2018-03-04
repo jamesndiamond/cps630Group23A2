@@ -4,8 +4,6 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -26,7 +24,31 @@
 			<a href="http://scs.ryerson.ca/~j6diamon/assignments/assignment2/assignment2.html"><button onclick="clearr()" class="btn btn-secondary" type="button">Home</button></a>
 			<button onClick="about()">About Us</button>
 			<button>Blogs</button>
-			<span class="glyphicon glyphicon-shopping-cart"></span>
+			
+			<!-- Shopping Cart button-->
+			<a data-toggle="modal" class="btn btn-info btn-md"  href="#cartModal" data-backdrop="static">
+					<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+			</a>
+			<div class="modal fade" id="cartModal" role="dialog">
+				<div class="modal-dialog">
+
+					<div class="modal-content">
+						<div classs="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+							<h4 class="modal-title">Shopping Cart</h4>
+						</div>
+						<div class="modal-body">
+							<p>This is where the paintings w/ prices will be.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>	
+			
+			</div>
+				
+		</div>
 		</nav>
 		
 
