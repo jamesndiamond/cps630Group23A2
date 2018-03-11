@@ -47,30 +47,30 @@
 						</div>
 						<div class="modal-body">
 							<p>Please select what you would like to purchase.</p>
-							<form>
+							<form id="shoppingForm">
 								  Painting:
-								  <select name="paintings">
-									  <option value="starryNight">Starry Night</option>
-									  <option value="laGrenouillere">La Grenouillère</option>
-									  <option value="theLastSupper">The Last Supper</option>
-									  <option value="american Gothic">American Gothic</option>
-									  <option value="theSonOfMan">The Son of Man</option>
+								  <select id= "paint" name="paintings">
+									  <option data-id="100,000" value="starryNight">Starry Night</option>
+									  <option data-id="200,000" value="laGrenouillere">La Grenouillère</option>
+									  <option data-id="300,000" value="theLastSupper">The Last Supper</option>
+									  <option data-id="1000" value="american Gothic">American Gothic</option>
+									  <option data-id="14,000,000" value="theSonOfMan">The Son of Man</option>
 								  </select>
 								  <br />
 								  <br />
-								  Quantity: <input type="number" name="quantity" min="1" max="5">
+								  Quantity: <input id="amount" type="number" name="quantity" min="1" max="5">
 								  <br />
 								  Shipping Plan: <br/>
 								  <input type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
 								  <input type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
 								  <input type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
 								<br/>
-								<input type="reset">
+								<button id="resetBtn">Reset </button>
 							  </form>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn">Add to Cart</button>
 							
 
 						</div>
@@ -80,6 +80,22 @@
 			</div>
 				
 		</div>
+
+		<script>
+		$(document).ready(function(){ 
+			$('#myBtn').click(function(){ 
+				alert($('#paint :selected').text());
+				alert($('input[name=shippingPlan]:checked').val()); 
+				alert($('input[name=quantity]').val()); 
+
+			});
+			$('#resetBtn').click(function(){
+				$('#shoppingForm')[0].reset();
+				return false;
+			});
+		  });
+		</script>
+
 		</nav>
 		
 
