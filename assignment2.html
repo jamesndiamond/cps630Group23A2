@@ -50,39 +50,40 @@
 							<form id="shoppingForm">
 								  Painting:
 								  <select id= "paint" name="paintings">
-									  <option data-id="100,000" value="starryNight">Starry Night</option>
-									  <option data-id="200,000" value="laGrenouillere">La Grenouillère</option>
-									  <option data-id="300,000" value="theLastSupper">The Last Supper</option>
-									  <option data-id="1000" value="american Gothic">American Gothic</option>
-									  <option data-id="14,000,000" value="theSonOfMan">The Son of Man</option>
+									  <option data-id="100" value="starryNight">Starry Night</option>
+									  <option data-id="200" value="laGrenouillere">La Grenouillère</option>
+									  <option data-id="300" value="theLastSupper">The Last Supper</option>
+									  <option data-id="100" value="american Gothic">American Gothic</option>
+									  <option data-id="140" value="theSonOfMan">The Son of Man</option>
 								  </select>
 								  <br />
 								  <br />
 								  Quantity: <input id="amount" type="number" name="quantity" min="1" max="5">
 								  <br />
 								  Shipping Plan: <br/>
-								  <input type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
-								  <input type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
-								  <input type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
+								  <input data-id="4.99" type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
+								  <input data-id="14.99" type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
+								  <input data-id="39.99" type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
 								<br/>
+								<button id="addBtn">Add to Cart </button>
 								<button id="resetBtn">Reset </button>
-							  </form>
+							</form>
 								<br />
 								
 							  <div class="_grid cart-totals">
-								<div class="_column subtotal" id="subtotalCtr">
+								<div class="subtotal" id="subtotalVal">
 								  <div class="sub">Subtotal</div>
 								  <div class="subVal">$0.00</div>
 								</div>
-								<div class="_column shipping" id="shippingCtr">
+								<div id="shippingVal">
 								  <div class="ship">Shipping</div>
 								  <div class="shipVal">$0.00</div>
 								</div>
-								<div class="_column taxes" id="taxesCtr">
+								<div id="taxesVal">
 								  <div>Taxes (14%)</div>
 								  <div class="taxVal">$0.00</div>
 								</div>
-								<div id="totalCtr">
+								<div id="totalVal">
 								  <div>Total</div>
 								  <div class="cartTotalVal">$0.00</div>
 								</div>
@@ -90,7 +91,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn">Add to Cart</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn">Checkout</button>
 							
 
 						</div>
@@ -106,7 +107,19 @@
 			$('#myBtn').click(function(){ 
 				alert($('#paint :selected').text());
 				alert($('input[name=shippingPlan]:checked').val()); 
+				alert(document.getElementByTagName("shippingPlan"));
 				alert($('input[name=quantity]').val()); 
+
+			});	
+			$('#addBtn').click(function(){ 
+				// alert($('#paint :selected').text());
+				// alert($('input[name=shippingPlan]:checked').val()); 
+				// alert($('input[name=quantity]').val()); 
+				$("#subtotalVal").find(".subVal").html(subtotal.to_$());
+				$("#taxesVal").find(".subVal").html((subtotal * 0.14).to_$());
+				$("#shippingVal").find(".subVal").html(shipVal.to_$());
+				$("#totalVal").find(".subVal").html(subtotal * 1.14 + shipping.to_$());
+				
 
 			});
 			$('#resetBtn').click(function(){
