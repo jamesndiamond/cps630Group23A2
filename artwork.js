@@ -19,64 +19,64 @@ function artWork1() {
 	show();
 	document.getElementById("artArtists").style.display = "-webkit-box";
 	document.getElementById("picture").src = "starrynight.jpg" ;
-	document.getElementById("information").innerHTML = "Name: <span onClick='artWork11()'> Starry Night</span> <br/> General Description: View from the east-facing window at Sait-Remy-de-Provence, just befoore sunrise. <br/> Price: $1 000 000" ;
+	document.getElementById("information").innerHTML = "Name: <span onClick='artWork11()'> Starry Night</span> <br/> General Description: View from the east-facing window at Sait-Remy-de-Provence, just befoore sunrise. <br/> Price: $100,000" ;
 }
 function artWork11() {
 	document.getElementById("artArtists").style.display = "none";
 	document.getElementById("artArtists2").style.display = "-webkit-box";
 	document.getElementById("picture2").src = "starrynight.jpg" ;
-	document.getElementById("information2").innerHTML = "Date of Production: June 1889<br> Type of the painting colours: Oil on Canvas <br> Dimensions: 73.7cm x 92.1cm<br> Location: Museum of Modern Art, NYC<br> Artist: Vincent van Gosh<br> Price: $1 000 000<br> Genre: Post-Impressionist" ;
+	document.getElementById("information2").innerHTML = "Date of Production: June 1889<br> Type of the painting colours: Oil on Canvas <br> Dimensions: 73.7cm x 92.1cm<br> Location: Museum of Modern Art, NYC<br> Artist: Vincent van Gosh<br> Price: $100,000<br> Genre: Post-Impressionist" ;
 }
 
 function artWork2() {
 	show();
 	document.getElementById("artArtists").style.display = "-webkit-box";
 	document.getElementById("picture").src = "lagrenouillère.jpg" ;
-	document.getElementById("information").innerHTML = "Name: <span onClick='artWork22()'> La Grenouillère</span> <br/> General Description: The ripples on the water, foliage, the boats, the human figures - weave a fabric of brushstrokes which, although emphatically brushstrokes, retain a strong descriptive quality.<br/> Price: $10 000 000" ;
+	document.getElementById("information").innerHTML = "Name: <span onClick='artWork22()'> La Grenouillère</span> <br/> General Description: The ripples on the water, foliage, the boats, the human figures - weave a fabric of brushstrokes which, although emphatically brushstrokes, retain a strong descriptive quality.<br/> Price: $200,000" ;
 }
 function artWork22() {
 	document.getElementById("artArtists").style.display = "none";
 	document.getElementById("artArtists2").style.display = "-webkit-box";
 	document.getElementById("picture2").src = "lagrenouillère.jpg" ;
-	document.getElementById("information2").innerHTML = "Date of Production:Sept. 1869<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 74.6cm x 99.7cm<br> Location: Metropolitan Museum of Art<br> Artist: Claude Monet<br> Price: $10 000 000<br> Genre: Impressionist" ;
+	document.getElementById("information2").innerHTML = "Date of Production:Sept. 1869<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 74.6cm x 99.7cm<br> Location: Metropolitan Museum of Art<br> Artist: Claude Monet<br> Price: $200,000<br> Genre: Impressionist" ;
 }
 
 function artWork3() {
 	show();
 	document.getElementById("artArtists").style.display = "-webkit-box";
 	document.getElementById("picture").src = "thelastsupper.jpg" ;
-	document.getElementById("information").innerHTML = "Name: <span onClick='artWork33()'> The Last Supper</span> <br/> General Description: Jesus and his apostles. <br/> Price: $23 000 000" ;
+	document.getElementById("information").innerHTML = "Name: <span onClick='artWork33()'> The Last Supper</span> <br/> General Description: Jesus and his apostles. <br/> Price: $300,000" ;
 }
 function artWork33() {
 	document.getElementById("artArtists").style.display = "none";
 	document.getElementById("artArtists2").style.display = "-webkit-box";
 	document.getElementById("picture2").src = "thelastsupper.jpg" ;
-	document.getElementById("information2").innerHTML = "Date of Production: 1490s<br> Type of the painting colours: Fresco-secco<br> Dimensions: 460cm x 880cm<br> Location: Convent of Santa Maria delle Grazie, Milan<br> Artist: Leonardo da Vinci<br> Price: $23 000 000 <br> Genre: High Renaissance" ;
+	document.getElementById("information2").innerHTML = "Date of Production: 1490s<br> Type of the painting colours: Fresco-secco<br> Dimensions: 460cm x 880cm<br> Location: Convent of Santa Maria delle Grazie, Milan<br> Artist: Leonardo da Vinci<br> Price: $300,000 <br> Genre: High Renaissance" ;
 }
 function artWork4() {
 	show();
 	document.getElementById("artArtists").style.display = "-webkit-box";
 	document.getElementById("picture").src = "americangothic.jpg" ;
-	document.getElementById("information").innerHTML = "Name: <span onClick='artWork44()'> American Gothic</span> <br/> General Description: A farmer with his wife infront of their house.<br/> Price: $500 000" ;
+	document.getElementById("information").innerHTML = "Name: <span onClick='artWork44()'> American Gothic</span> <br/> General Description: A farmer with his wife infront of their house.<br/> Price: $1000" ;
 }
 function artWork44() {
 	document.getElementById("artArtists").style.display = "none";
 	document.getElementById("artArtists2").style.display = "-webkit-box";
 	document.getElementById("picture2").src = "americangothic.jpg" ;
-	document.getElementById("information2").innerHTML = "Date of Production: 1930<br> Type of the painting colours: Oil on Beaverboard<br> Dimensions: 78cm x 65.3cm<br> Location: Art Institute of Chicago<br> Artist: Grant Wood<br> Price: $500 000 <br> Genre: Southern Gothic" ;
+	document.getElementById("information2").innerHTML = "Date of Production: 1930<br> Type of the painting colours: Oil on Beaverboard<br> Dimensions: 78cm x 65.3cm<br> Location: Art Institute of Chicago<br> Artist: Grant Wood<br> Price: $1000 <br> Genre: Southern Gothic" ;
 }
 
 function artWork5() {
 	show();
 	document.getElementById("artArtists").style.display = "-webkit-box";
 	document.getElementById("picture").src = "thesonofman.jpg" ;
-	document.getElementById("information").innerHTML = "Name: <span onClick='artWork55()'> The Son of Man</span> <br/> General Description: A self portrait with an apple front and centre. <br/> Price: $16 000 000" ;
+	document.getElementById("information").innerHTML = "Name: <span onClick='artWork55()'> The Son of Man</span> <br/> General Description: A self portrait with an apple front and centre. <br/> Price: $14 000 000" ;
 }
 function artWork55() {
 	document.getElementById("artArtists").style.display = "none";
 	document.getElementById("artArtists2").style.display = "-webkit-box";
 	document.getElementById("picture2").src = "thesonofman.jpg" ;
-	document.getElementById("information2").innerHTML = "Date of Production: 1964<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 116cm x 89cm<br> Location: Private Collection<br> Artist: René Magritte<br> Price: $16 000 000 <br> Genre: Surrealist" ;
+	document.getElementById("information2").innerHTML = "Date of Production: 1964<br> Type of the painting colours: Oil on Canvas<br> Dimensions: 116cm x 89cm<br> Location: Private Collection<br> Artist: René Magritte<br> Price: $14 000 000 <br> Genre: Surrealist" ;
 }
 
 
