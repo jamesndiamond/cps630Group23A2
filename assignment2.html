@@ -50,22 +50,24 @@
 							<form id="shoppingForm">
 								  Painting:
 								  <select id= "paint" name="paintings">
-									  <option data-id="100,000" value="starryNight">Starry Night</option>
-									  <option data-id="200,000" value="laGrenouillere">La Grenouillère</option>
-									  <option data-id="300,000" value="theLastSupper">The Last Supper</option>
+									  <option data-id="100000" value="starryNight">Starry Night</option>
+									  <option data-id="200000" value="laGrenouillere">La Grenouillère</option>
+									  <option data-id="300000" value="theLastSupper">The Last Supper</option>
 									  <option data-id="1000" value="american Gothic">American Gothic</option>
-									  <option data-id="14,000,000" value="theSonOfMan">The Son of Man</option>
+									  <option data-id="14000000" value="theSonOfMan">The Son of Man</option>
 								  </select>
 								  <br />
 								  <br />
 								  Quantity: <input id="amount" type="number" name="quantity" min="1" max="5">
 								  <br />
 								  Shipping Plan: <br/>
-								  <input type="radio" name="shippingPlan" value="standard" checked>Standard (2-3 weeks): $4.99 <br/>
-								  <input type="radio" name="shippingPlan" value="express">Express (2-5 days): $14.99 <br/>
-								  <input type="radio" name="shippingPlan" value="nextDay">Next Day: $39.99 <br />
+								  <input type="radio" name="shippingPlan" value="4.99" checked>Standard (2-3 weeks): $4.99 <br/>
+								  <input type="radio" name="shippingPlan" value="14.99">Express (2-5 days): $14.99 <br/>
+								  <input type="radio" name="shippingPlan" value="39.99">Next Day: $39.99 <br />
 								<br/>
 								<button id="resetBtn">Reset </button>
+								<br />
+								<p style="" id="cartBtn">Add to Cart </p>
 							  </form>
 								<br />
 								
@@ -90,7 +92,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn">Add to Cart</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn">Checkout</button>
 							
 
 						</div>
@@ -104,15 +106,39 @@
 		<script>
 		$(document).ready(function(){ 
 			$('#myBtn').click(function(){ 
-				alert($('#paint :selected').text());
-				alert($('input[name=shippingPlan]:checked').val()); 
-				alert($('input[name=quantity]').val()); 
+				var paintName = $('#paint :selected').text();
+				var paintValue = $('#paint :selected').attr("data-id");
+				var quantity = $('input[name=quantity]').val();
+				var shipping = $('input[name=shippingPlan]:checked').val();
+				var subVal = parseInt(paintValue) * parseInt(quantity);
+				var tax = (parseInt(subVal)+parseInt(shipping)) * 0.14;
+				var total = parseInt(subVal)+parseInt(shipping)+parseInt(tax);
 
+				alert("You are buying " + $('input[name=quantity]').val() + " copie(s) of " + $('#paint :selected').text() + " for $" + total);
 			});
 			$('#resetBtn').click(function(){
 				$('#shoppingForm')[0].reset();
 				return false;
 			});
+
+			$('#cartBtn').click(function(){
+				var paintName = $('#paint :selected').text();
+				var paintValue = $('#paint :selected').attr("data-id");
+				var quantity = $('input[name=quantity]').val();
+				var shipping = $('input[name=shippingPlan]:checked').val();
+				var subVal = parseInt(paintValue) * parseInt(quantity);
+				var tax = (parseInt(subVal)+parseInt(shipping)) * 0.14;
+				var total = parseInt(subVal)+parseInt(shipping)+parseInt(tax);
+				
+
+				$('.subVal').text("$" + subVal);
+				$('.shipVal').text("$" + shipping);
+				$('.taxVal').text("$" + tax);
+				$('.cartTotalVal').text("$" + total);
+				
+				var newTotal=total;
+			});
+
 		  });
 		</script>
 
